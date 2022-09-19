@@ -25,7 +25,13 @@
             // want to populate with text)
             document.getElementById("fname").textContent = firstName;
             document.getElementById("lname").textContent = lastName;
-            document.getElementById("birthday").textContent = birthday;
+
+            if (birthday.localeCompare("on") == 0) {
+                document.getElementById("birthday").textContent = "It is your birthday."
+            }
+            else {
+                document.getElementById("birthday").textContent = "It is not your birthday."
+            }
         };
 
         //Function retrieves the requested GET parameter value from
