@@ -1,30 +1,53 @@
+<!-- This is the Chapter 3 Demo page    
+    More HTML for CPSC 314 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-        <title>CPSC 332 Participation - 09/19/2022</title>
+        <title>Fake Form Demo</title>
+        <link rel="icon" href="favicon2.png">
 </head>
 
 <body>
         <h1>Hello, World! New web page, who is this?</h1>
-        <img src="understandable.jpg"
-                alt="Shaquille O'Neal" width="500">
-
+        <img src="icee.jpg" alt="icee logo">
         <form action="submission.html" method="GET">
                 <p>
                         <label for="first">First Name:</label>
-                        <input type="text" name="first" id="first">
+                        <input type="text" name="first" id="first" placeholder="FIRST name only please">
                 </p>
                 <p>
                         <label for="last">Last Name:</label>
-                        <input type="text" name="last" id="last">
+                        <input type="text" name="last" id="last" placeholder="LAST name only please">
                 </p>
                 <p>
-                        <label for="birthday">It is my birthday today:</label>
-                        <input type="checkbox" name="birthday" id="birthday">
+                        <label for="alive">I am alive:</label>
+                        <input type="checkbox" name="alive" id="alive" checked>
                 </p>
-                <input type="submit" value="Submit Feedback">
+                <p>
+                        Select the goat:
+                </p>
+                <p>
+                        <label for="jordan">Michael Jordan:</label>
+                        <input type="radio" name="player" id="jordan" checked>
+                </p>
+                <p>
+                        <label for="james">LeBron James:</label>
+                        <input type="radio" name="player" id="james">
+                </p>
+                <p>
+                        <label for="reason">Please tell me why:</label>
+                        <textarea rows="10" cols="100" name="reason" id="reason"></textarea>
+                </p>
+                <p>
+                        <input type="submit" value="Submit Feedback">
+                </p>
         </form>
+
+        <br>
+        <br>
+        <a href="../../">Go back to index page</a>
 </body>
 
 </html>
