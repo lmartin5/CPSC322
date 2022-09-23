@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09/23/2022 Participation</title>
+
+    <link rel="stylesheet" href="my-style-sheet.css">
+
+    <!-- li { background-color: chocolate;}--> will overide the style in the external sheet
+    <style>
+        h1 {
+            background-color: rgb(24, 230, 175);
+        }
+        #main-header, li {
+            color: antiquewhite;
+        }
+
+        .sub-header {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-header">Today's Participation</h1>
+    <h1 style="background-color: blue">But wait, there's more</h1>
+    <p>
+        <ul>
+            <li>Inline style - places CSS declaration inside a tag's style attribute</li>
+            <li>Embedded style sheet - placing CSS inside the style tag in the head tag of an HTML document</li>
+            <li>External style sheet - CSS file outside of the HTML file, included in a link reference</li>
+        </ul>
+        <ul>
+            <li>You can select elements, class, ids, or subelements to style></li>
+            <li>Ex: h2 em {}</li>
+        </ul>
+    </p>
+    <h2 class="sub-header">This is a L2 Header</h2>
+    <h3 class="sub-header">This is a L3 Header</h3>
+    <br>
+    <a href="../../">Go back to index page</a>
+</body>
+</html>
