@@ -1,3 +1,12 @@
 li {
     background-color: red;
 }
+
+#main-header:hover {
+    background-color: chartreuse;
+}
+
+#main-header:hover::after {
+    content: " BOO!";
+    background-color: orange;
+}
