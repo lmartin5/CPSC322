@@ -5,9 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fluid Layout</title>
+    <style>
+
+        body {
+            padding: 0px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #topRow {
+            background-color: lightblue;
+            width: 100%;
+            line-height: 50px;
+            height: 50px;
+        }
+
+        #secondRowFirst {
+            background-color: green;
+            height: 300px;
+            line-height: 300px;
+            width: 20%;
+            float: left;
+        }
+
+        #secondRowSecond {
+            background-color: orange;
+            height: 300px;
+            line-height: 300px;
+            width: auto;
+        }
+
+    </style>
 </head>
 <body>
-    
-    <a href="./">Go back to participation layouts page</a>
+    <div id="topRow"><strong>Stuff</strong></div>
+    <div id="secondRowFirst"><strong>More Stuff</strong></div>
+    <div id="secondRowSecond"><strong>Even More Stuff</strong></div>
+    <div><a href="./">Go back to participation layouts page</a></div>
 </body>
 </html>
