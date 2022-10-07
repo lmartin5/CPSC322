@@ -11,6 +11,11 @@
             var myInt = "42"; // broader in scope than expected
             let myOtherInt = 9001; // recommended for var decls, scope is more in line with C++
             anotherInt = 9000; // js is chill with this, implicitly declared
+            // anotherInt is in global scope
+            let response = prompt("Do you want to play a game?")
+            alert("You said: " + response)
+
+            console.log(window.location) // the curr url
 
             alert("Booyah!");
 
@@ -23,6 +28,21 @@
             Multiline comment
             */
            console.log("console message")
+
+           /* Error
+           if (true){
+               let y = 42
+           }
+           console.log(y)
+           */
+
+           let number = 2;
+           console.log(number + 2); // 4
+           console.log(number + "2") // 22
+           console.log(number + parseInt("2")) // 4
+           // === is strict equality, must have same type and value
+           // NaN is NotaNumber
+           // non-inited variables are initialized as undefined, different than null
         }
     </script>
 </head>
