@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/05/2022 Participation</title>
+
+    <script>
+        window.onload = function() {
+           console.log("10-10 Participation Loaded")
+
+            // arrowAdd2(40, 1, 2); error blocks code from running, code would stop here
+
+            try {
+                arrowAdd2(40, 1, 2);
+            } catch (error) {
+                console.log(error)
+            }
+            finally {}
+
+            /* https://www.w3schools.com/js/js_arrow_function.asp */
+            // hoisted
+            function hello() { return "Hello world!" }
+
+            // only available below, in constrast to function definition
+            let arrowAdd2 = (x, y, z) => x + y;
+            var myArray = [1, 2, "3", 4];
+
+            for (let i = 0; i < myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+
+            for (const myVal of myArray) {
+                console.log(myVal)
+            }
+
+            // https://www.w3schools.com/jsref/jsref_foreach.asp
+            myArray.forEach(function(item, i){
+                console.log(item + " " + i)
+            });
+            // sorting always done by unicode value if you use .sort()
+
+
+            var myObject = {
+                name: "defaultName", 
+                someNumber: 42, 
+                array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+                // object method
+                echo: function(value) {
+                    console.log(value)
+                }, 
+
+                get numberPlusOne() {
+                    return this.someNumber + 1;
+                }, 
+
+                set someNumberPlusAnother(num) {
+                    this.someNumber += num;
+                }
+            };
+
+            console.log(myObject.name);
+            myObject.name = "Bob Smith";
+            console.log(myObject.name);
+            myObject.echo("Hello, world!");
+
+            console.log(myObject.numberPlusOne); // dont need open close for getter
+            myObject.someNumberPlusAnother = 9000; // setter
+            console.log(myObject.someNumber);
+
+            let dateTimeNow = new Date();
+            console.log(dateTimeNow);
+        }
+
+        var currentDate = {
+            dateTime: null
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Even more Javascript!</h1>
+    <img src="potato-meme.jpg" alt="Potato meme">
+    <div>
+        <p>
+            <span id="date-text">Click the button...</span>
+        </p>
+        <p>
+            <button id="update-date">Click to see current date time!</button>
+        </p>
+    </div>
+    <br>
+    <a href="../../">Go back to index page</a>
+</body>
+</html>
