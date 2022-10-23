@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/21 Participation</title>
+    <style>
+        body {
+            background-image: url("MJ.jpg");
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        fieldset {
+            border: 5px blue dashed;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: lightcoral;
+        }
+        fieldset legend {
+            padding: 5px;
+            margin: 10px;
+            line-height: 20px;
+            background-color: lightblue;
+            border-radius: 25px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let player1 = sessionStorage.getItem("playerA");
+            let player2 = sessionStorage.getItem("playerB");
+            let player3 = sessionStorage.getItem("playerC");
+
+            console.log(player1)
+
+            document.getElementById("player1").innerText = player1;
+            document.getElementById("player2").innerText = player2;
+            document.getElementById("player3").innerText = player3;
+        } // end of onload function
+    </script>
+</head>
+<body>
+    <fieldset>
+    <table>
+        <legend>Greatest Players of All Time</legend>
+        <tr>
+            <th>Player 1</th>
+            <th>Player 2</th>
+            <th>Player 3</th>
+        </tr>
+        <tr>
+            <td id="player1"></td>
+            <td id="player2"></td>
+            <td id="player3"></td>
+        </tr>
+    </table>
+    <br><a href="index.html">Back to submission page</a>
+    <br><a href="../../index.html">Back to the participation index</a>
+    </fieldset>
+</body>
+</html>

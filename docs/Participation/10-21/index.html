@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/21 Participation</title>
+    <style>
+        body {
+            background-image: url("MJ.jpg");
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        fieldset {
+            border: 5px blue dashed;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: lightcoral;
+        }
+        fieldset legend {
+            padding: 5px;
+            margin: 10px;
+            line-height: 20px;
+            background-color: lightblue;
+            border-radius: 25px;
+        }
+        #form {
+            padding: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let playerASave = false
+            let playerBSave = false
+            let playerCSave = false
+
+            createErrorMessage = function() {
+                if (!document.getElementById("message")) {
+                    message = document.createElement("p");
+                    message.id = "message"
+                    message.innerText = "You can not save empty strings for player names."
+                    document.getElementById("fieldset").insertBefore(message, document.getElementById("link"))
+                }
+            }
+
+            document.getElementById("inputaButton").addEventListener("click", () => {
+                player = document.getElementById("inputa").value;
+
+                if (player.length == 0) {
+                    createErrorMessage();
+                    playerASave = false
+                }
+                else {
+                    sessionStorage.setItem("playerA", player)
+                    playerASave = true
+                }
+            });
+
+            document.getElementById("inputa").addEventListener("focus", () => {
+                if (document.getElementById("message"))
+                document.getElementById("message").remove()
+                if (document.getElementById("message2"))
+                document.getElementById("message2").remove()
+            });
+
+            
+            document.getElementById("inputb").addEventListener("focus", () => {
+                if (document.getElementById("message")) 
+                document.getElementById("message").remove()
+                if (document.getElementById("message2"))
+                document.getElementById("message2").remove()
+            });
+
+            
+            document.getElementById("inputc").addEventListener("focus", () => {
+                if (document.getElementById("message")) 
+                document.getElementById("message").remove()
+                if (document.getElementById("message2"))
+                document.getElementById("message2").remove()
+            });
+
+            document.getElementById("inputbButton").addEventListener("click", () => {
+                player = document.getElementById("inputb").value;
+
+                if (player.length == 0) {
+                    createErrorMessage();
+                    playerBSave = false
+                }
+                else {
+                    sessionStorage.setItem("playerB", player)
+                    playerBSave = true
+                }
+            });
+
+            document.getElementById("inputcButton").addEventListener("click", () => {
+                player = document.getElementById("inputc").value;
+
+                if (player.length == 0) {
+                    createErrorMessage();
+                    playerCSave = false
+                }
+                else {
+                    sessionStorage.setItem("playerC", player)
+                    playerCSave = true
+                }
+            });
+
+            document.getElementById("submit").addEventListener("click", (event) => {
+                if (!(playerASave && playerBSave && playerCSave)) {
+                    if (!document.getElementById("message2")) {
+                        message = document.createElement("p");
+                        message.id = "message2"
+                        message.innerText = "You must save a name for all three players before submitting."
+                        document.getElementById("fieldset").insertBefore(message, document.getElementById("link"))
+                    }
+                    event.preventDefault();
+                }
+            })
+
+        } // end of onload function
+    </script>
+</head>
+<body>
+    <fieldset id="fieldset">
+        <legend id="fieldset-legend">CPSC 332 10/21 Participation</legend>
+        Rank your top three basketball players of all time.
+        <form id="form" method="post" action="submission.html">
+            <div>
+            <label for="inputa">Player 1:</label>
+            <input id="inputa">
+            <button type="button" id="inputaButton">Save Player 1</button>
+            </div>
+            <div>
+            <label for="inputb">Player 2:</label>
+            <input id="inputb">
+            <button type="button" id="inputbButton">Save Player 2</button>
+            </div>
+            <div>
+            <label for="inputc">Player 3:</label>
+            <input id="inputc">
+            <button type="button" id="inputcButton">Save Player 3</button>
+            </div>
+            <div>
+            <input id="submit" type="submit" value="Submit Response">
+            </div>
+        </form>
+    
+    <br><a id="link" href="../../index.html">Back to the participation index</a>
+    </fieldset>
+</body>
+</html>
