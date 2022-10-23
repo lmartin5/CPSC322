@@ -52,9 +52,11 @@
                 if (player.length == 0) {
                     createErrorMessage();
                     playerASave = false
+                    event.target.innerText = "Save Player 1";
                 }
                 else {
                     sessionStorage.setItem("playerA", player)
+                    event.target.innerText = "Save Player 1 (Saved)";
                     playerASave = true
                 }
             });
@@ -86,10 +88,12 @@
                 player = document.getElementById("inputb").value;
 
                 if (player.length == 0) {
+                    event.target.innerText = "Save Player 2";
                     createErrorMessage();
                     playerBSave = false
                 }
                 else {
+                    event.target.innerText = "Save Player 2 (Saved)";
                     sessionStorage.setItem("playerB", player)
                     playerBSave = true
                 }
@@ -101,9 +105,11 @@
                 if (player.length == 0) {
                     createErrorMessage();
                     playerCSave = false
+                    event.target.innerText = "Save Player 3";
                 }
                 else {
                     sessionStorage.setItem("playerC", player)
+                    event.target.innerText = "Save Player 3 (Saved)";
                     playerCSave = true
                 }
             });
