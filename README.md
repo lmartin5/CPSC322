@@ -1,2 +1,2 @@
-# CPSC322
-This is my repo for the work done in CPSC322.
+# CPSC332
+This is my repo for the work done in CPSC332.
